@@ -89,7 +89,7 @@ void setup() {
 
     // initialize device
     Serial.println("Initializing I2C devices...");
-    BTSerial.println("Initializing Data on Bluetooth");
+    Serial.println("Initializing Data on Bluetooth");
     accelgyro.initialize();
 
     // verify connection
@@ -142,11 +142,11 @@ void loop() {
         Serial.println(gz);
 
         BTSerial.print("a/g:\t");
-        BTSerial.print(ax); Serial.print("\t");
-        BTSerial.print(ay); Serial.print("\t");
-        BTSerial.print(az); Serial.print("\t");
-        BTSerial.print(gx); Serial.print("\t");
-        BTSerial.print(gy); Serial.print("\t");
+        BTSerial.print(ax); Serial.print(",\t");
+        BTSerial.print(ay); Serial.print(",\t");
+        BTSerial.print(az); Serial.print(",\t");
+        BTSerial.print(gx); Serial.print(",\t");
+        BTSerial.print(gy); Serial.print(",\t");
         BTSerial.println(gz);
     #endif
 
